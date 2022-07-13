@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateClassActivity">
+
+    <RadioGroup
+        android:id="@+id/createClassStatusGroup"
+        android:layout_width="204dp"
+        android:layout_height="227dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/EditClassEnd">
+
+        <RadioButton
+            android:id="@+id/createClassInProgress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="In Progress" />
+
+        <RadioButton
+            android:id="@+id/createClassCompleted"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Completed" />
+
+        <RadioButton
+            android:id="@+id/createClassDropped"
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:text="Dropped" />
+
+        <RadioButton
+            android:id="@+id/createClassPlanToTake"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:text="Plan To Take" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/createClassInstructorEmail"
+        android:layout_width="173dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="88dp"
+        android:ems="10"
+        android:hint="Instructor Email"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/EditClassEnd"
+        style="?android:spinnerStyle"
+        android:layout_width="214dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="204dp"
+        android:layout_marginBottom="136dp"
+        android:hint="End Date"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/EditClassStart"
+        style="?android:spinnerStyle"
+        android:layout_width="214dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="192dp"
+        android:layout_marginBottom="188dp"
+        android:hint="Start Date"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/EditClassTitle"
+        android:layout_width="256dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="264dp"
+        android:text="Create Class"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/EditClassName"
+        android:layout_width="185dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="212dp"
+        android:ems="10"
+        android:hint="Class Name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/createClassOptionalNotes"
+        android:layout_width="206dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="204dp"
+        android:layout_marginBottom="248dp"
+        android:ems="10"
+        android:hint="Optional Notes"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/createClassInstructorName"
+        android:layout_width="174dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="Instructor Name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/createClassInstructorPhoneNumber"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/createClassInstructorPhoneNumber"
+        android:layout_width="174dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="192dp"
+        android:layout_marginBottom="88dp"
+        android:ems="10"
+        android:hint="Instructor Phone #"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="406dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/EditClassAssessmentRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="1dp"
+            android:layout_marginBottom="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/EditClassAddAssessment"
+        android:layout_width="129dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="640dp"
+        android:layout_marginBottom="84dp"
+        android:text="Add Test"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/createClassPopulateSMS"
+        android:layout_width="129dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="640dp"
+        android:layout_marginBottom="164dp"
+        android:text="Send notes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/EditClassSaveChanges"
+        android:layout_width="142dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="640dp"
+        android:layout_marginBottom="4dp"
+        android:text="Create Class"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/EditClassCancel"
+        android:layout_width="126dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="640dp"
+        android:layout_marginBottom="160dp"
+        android:text="Cancel"
+        app:layout_constraintBottom_toTopOf="@+id/EditClassSaveChanges"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

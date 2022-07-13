@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateTermActivity">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="129dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="244dp"
+        android:text="Classes to be Added"
+        app:layout_constraintBottom_toTopOf="@+id/createTermRecyclerView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/EndDate"
+        style="?android:spinnerStyle"
+        android:layout_width="213dp"
+        android:layout_height="49dp"
+        android:hint = "End Date"
+        android:layout_marginStart="88dp"
+        android:layout_marginBottom="496dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/termName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="123dp"
+        android:layout_marginBottom="675dp"
+        android:text="CreateTerm"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/createTermName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="93dp"
+        android:layout_marginBottom="624dp"
+        android:ems="10"
+        android:hint="Term Name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/StartDate"
+        style="?android:spinnerStyle"
+        android:layout_width="213dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="13dp"
+        android:hint = "Start Date"
+        android:layout_marginBottom="562dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createTermName" />
+
+    <Button
+        android:id="@+id/backButtonFromCreateTerm2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="3dp"
+        android:text="back"
+        app:layout_constraintBottom_toTopOf="@+id/createTermName"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/SubmitTerm"
+        android:layout_width="203dp"
+        android:layout_height="94dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginBottom="27dp"
+        android:text="submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/createTermRecyclerView"
+        android:layout_width="193dp"
+        android:layout_height="322dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/SubmitTerm"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/createTermRecyclerView2"
+        android:layout_width="213dp"
+        android:layout_height="325dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/SubmitTerm"
+        app:layout_constraintStart_toEndOf="@+id/createTermRecyclerView" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="129dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="36dp"
+        android:text="Available Classes"
+        app:layout_constraintBottom_toTopOf="@+id/createTermRecyclerView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

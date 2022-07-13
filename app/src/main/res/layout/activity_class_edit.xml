@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ClassEditActivity">
+
+    <EditText
+        android:id="@+id/editClassInstructorEmail"
+        android:layout_width="171dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="340dp"
+        android:ems="10"
+        android:hint="Instructor Email"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/editClassOptionalNotes"
+        android:layout_width="215dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginBottom="340dp"
+        android:ems="10"
+        android:hint="Optional Notes"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/editClassInstructorName"
+        android:layout_width="179dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="448dp"
+        android:ems="10"
+        android:hint="Instructor Name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/editClassInstructorPhoneNumber"
+        android:layout_width="177dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="384dp"
+        android:ems="10"
+        android:hint="Instructor Phone #"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <RadioGroup
+        android:id="@+id/editClassStatusGroup"
+        android:layout_width="212dp"
+        android:layout_height="262dp"
+        app:layout_constraintBottom_toTopOf="@+id/editClassOptionalNotes"
+        app:layout_constraintStart_toEndOf="@+id/EditClassStart">
+
+        <RadioButton
+            android:id="@+id/editClassInProgress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="In Progress" />
+
+        <RadioButton
+            android:id="@+id/editClassCompleted"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Completed" />
+
+        <RadioButton
+            android:id="@+id/editClassDropped"
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:text="Dropped" />
+
+        <RadioButton
+            android:id="@+id/editClassPlanToTake"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:text="Plan To Take" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/EditClassEnd"
+        style="?android:spinnerStyle"
+        android:layout_width="213dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="512dp"
+        android:hint="Description"
+        android:text="End Date"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/EditClassStart"
+        style="?android:spinnerStyle"
+        android:layout_width="213dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="564dp"
+        android:text="Start Date"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/EditClassTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="123dp"
+        android:layout_marginBottom="675dp"
+        android:text="Edit Class"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/EditClassName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="616dp"
+        android:ems="10"
+        android:hint="Class Name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="404dp"
+        android:layout_height="256dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/EditClassAssessmentRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="1dp"
+            android:layout_marginBottom="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/EditClassAddAssessment"
+        android:layout_width="144dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="8dp"
+        android:text="Add Assessment"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/editClassNotifyMe"
+        android:layout_width="111dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="408dp"
+        android:text="Notify Me"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/editClassShareNotes"
+        android:layout_width="124dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginBottom="8dp"
+        android:text="Send Notes"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/EditClassSaveChanges"
+        android:layout_width="144dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="276dp"
+        android:layout_marginBottom="8dp"
+        android:text="save changes"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/EditClassDelete"
+        android:layout_width="132dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="4dp"
+        android:text="delete class"
+        app:layout_constraintBottom_toTopOf="@+id/EditClassName"
+        app:layout_constraintStart_toEndOf="@+id/EditClassTitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

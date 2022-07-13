@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AssessmentEditActivity2">
+
+    <Button
+        android:id="@+id/EditAssessment2EndDate"
+        style="?android:spinnerStyle"
+        android:layout_width="213dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginBottom="420dp"
+        android:hint="End Date"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/EditAssessment2OAandPA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginBottom="540dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/EditAssessment2OA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Objective Assessment" />
+
+        <RadioButton
+            android:id="@+id/EditAssessment2PA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Performance Assessment" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/EditAssessment2Cancel"
+        android:layout_width="120dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginBottom="24dp"
+        android:text="Cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/EditAssessment2Submit"
+        android:layout_width="120dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="248dp"
+        android:layout_marginBottom="100dp"
+        android:text="Submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/editAssessmentNotifyMe"
+        android:layout_width="135dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginBottom="192dp"
+        android:text="Notify Me"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/editAssessment2Delete"
+        android:layout_width="135dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="104dp"
+        android:text="Delete Assessment"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="254dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginBottom="10dp"
+        android:text="Edit Assessment"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/EditAssessment2OAandPA"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/EditAssessment2StartDate"
+        style="?android:spinnerStyle"
+        android:layout_width="213dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginBottom="484dp"
+        android:hint="Start Date"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/EditAssessment2Description"
+        android:layout_width="317dp"
+        android:layout_height="104dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginBottom="28dp"
+        android:ems="10"
+        android:hint="Assessment Description"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/editAssessmentNotifyMe"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
